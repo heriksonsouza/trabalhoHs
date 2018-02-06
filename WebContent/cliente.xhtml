@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<body>
+
+
+	<ui:composition template="templatePrincipal.xhtml">
+
+		<ui:define name="conteudo">
+			<p:panel header="Dados Pessoais">
+				<h:form id="form">
+					<h:message id="teste"  ></h:message>
+					<h:panelGrid columns="2">
+						<p:outputLabel value="Nome:" for="nome" />
+						<p:inputText id="nome" value="#{beanCliente.cliente.nome}" />
+						
+						<p:outputLabel value="Cpf: " for="cpf" />
+						<p:inputMask id="cpf" value="#{beanCliente.cliente.cpf}" mask="999.999.999-99" />
+					</h:panelGrid>
+					<p:commandButton action="#{beanCliente.savlar()}" value="salvar" icon="ui-icon-check" />
+				</h:form>
+			</p:panel>
+
+		</ui:define>
+
+	</ui:composition>
+</body>
+</html>

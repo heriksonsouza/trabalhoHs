@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<ui:composition template="../templatePrincipal.xhtml">
+
+		<ui:define name="conteudo">
+			<h:form id="form">
+				<p:dataTable id="tabela" value="#{beanListCliente.lista}" var="cli">
+					<f:facet name="header">Lista de Cliente</f:facet>
+
+					<p:column headerText="nome" style="text-align:right">
+				#{cli.id}
+			</p:column>
+					<p:column headerText="nome">
+				#{cli.nome}
+			</p:column>
+					<p:column style="width:15%">
+						<p:commandButton action="#{beanListCliente.excluir()}"
+							oncomplete="#{beanListCliente.lista}" icon="ui-icon-trash">
+							<f:setPropertyActionListener value="#{cli}"
+								target="#{beanListCliente.cliente}" />
+						</p:commandButton>
+						<p:commandButton oncomplete="PF('dialog').show();"
+							update=":form:painelDados" icon="ui-icon-pencil">
+							<f:setPropertyActionListener value="#{cli}"
+								target="#{beanListCliente.cliente}" />
+						</p:commandButton>
+					</p:column>
+				</p:dataTable>
+
+				<p:dialog id="dlg" header="Editar Cliente" widgetVar="dialog"
+					appendToBody="true" resizable="false" modal="true">
+					<p:panelGrid id="painelDados" columns="1">
+						<p:inputText id="nome" value="#{beanListCliente.cliente.nome}" />
+					</p:panelGrid>
+					<p:commandButton icon="ui-icon-pencil"
+						action="#{beanListCliente.savlar()}" ajax="false" />
+				</p:dialog>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>

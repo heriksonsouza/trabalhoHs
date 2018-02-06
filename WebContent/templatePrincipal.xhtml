@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<h:outputStylesheet library="css" name="layoutTemplate.css" />
+</h:head>
+<h:body>
+	<div id="pagina">
+		<header style="height: 200px;"> 
+			<h:graphicImage value="resources/img/paranavai-vertical.png"
+			style="width:100% important!;margin-left:auto;" /> 
+		</header>
+		<p:separator />
+		<h:form>
+			<h:form>
+				<p:growl id="messages" />
+				
+				<p:menubar>
+					<p:submenu label="Cadastro" icon="ui-icon-document">
+						<p:menuitem value="Cliente" url="cliente.xhtml" />
+						<p:menuitem value="Gerente" url="#" />
+						<p:menuitem value="Conta" url="conta.xhtml" />
+					</p:submenu>
+					<p:submenu label="Consulta" icon="ui-icon-document">
+						<p:menuitem value="Cliente" url="administrador/listaCliente.xhtml" />
+						<p:menuitem value="Gerente" url="#" />
+						<p:menuitem value="Caixa" url="#" />
+					</p:submenu>
+					<p:submenu label="Movimento" icon="ui-icon-document">
+						<p:menuitem value="Transferência" url="cliente" />
+						<p:menuitem value="Depósito" url="#" />
+						<p:menuitem value="Retirada" url="#" />
+					</p:submenu>
+					
+				</p:menubar>
+			</h:form>
+		</h:form>
+
+		<div id="cont" style="max-width: 100%;margin-top:20px;">
+			<ui:insert name="conteudo"></ui:insert>
+		</div>
+	</div>
+</h:body>
+
+</html>

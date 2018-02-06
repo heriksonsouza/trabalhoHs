@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<body>
+	<ui:composition template="templatePrincipal.xhtml">
+		<ui:define name="conteudo">
+			<p:panel header="Contas">
+				<h:form id="form">
+					<p:panelGrid columns="2">
+						<p:outputLabel value="Saldo:" for="saldo" />
+						<p:inputNumber id="saldo" value="#{beanConta.conta.saldo}" />
+						
+						<p:outputLabel value="Cliente: " for="cliente" />
+						<p:selectOneMenu id="cliente" value="#{beanConta.conta.cliente}" converter="conversorCliente" >
+							<f:selectItems value="#{beanConta.clientes2}" var="cliente" itemLabel="#{cliente.nome}" itemValue="#{cliente}" />
+						</p:selectOneMenu>
+					</p:panelGrid>
+					<p:commandButton action="#{beanConta.savlar()}" value="salvar"
+						icon="ui-icon-plus" />
+				</h:form>
+			</p:panel>
+
+		</ui:define>
+	</ui:composition>
+</body>
+</html>
