@@ -3,16 +3,12 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="postgresqlPU" transaction-type="RESOURCE_LOCAL">
-		<class>br.edu.ifpr.entidades.Autor</class>
-		<class>br.edu.ifpr.entidades.Proposicao</class>
-			<class>br.edu.ifpr.entidades.TipoProposicao</class>
-		<class>br.edu.ifpr.entidades.Partido</class>
-		<class>br.edu.ifpr.entidades.Cliente</class>
-		<class>br.edu.ifpr.entidades.Conta</class>
-		<class>br.edu.ifpr.entidades.Operacao</class>
-		<class>br.edu.ifpr.entidades.Pessoa</class>
-		<class>br.edu.ifpr.entidades.Gerente</class>
-		<class>br.edu.ifpr.entidades.Privilegio</class>
+		<class>br.gov.pr.legislativo.entidades.Autor</class>
+		<class>br.gov.pr.legislativo.entidades.Proposicao</class>
+			<class>br.gov.pr.legislativo.entidades.TipoProposicao</class>
+		<class>br.gov.pr.legislativo.entidades.Partido</class>
+		<class>br.gov.pr.legislativo.entidades.Administrador</class>
+		<class>br.gov.pr.legislativo.entidades.Privilegio</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/bancoHs" />
 			<property name="javax.persistence.jdbc.user" value="postgres" />
