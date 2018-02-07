@@ -3,15 +3,14 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="postgresqlPU" transaction-type="RESOURCE_LOCAL">
-		<class>br.edu.ifpr.entidades.Conteudo</class>
-		<class>br.edu.ifpr.entidades.Nivel</class>
-		<class>br.edu.ifpr.entidades.Curso</class>
-		<class>br.edu.ifpr.entidades.Turma</class>
+		<class>br.edu.ifpr.entidades.Autor</class>
+		<class>br.edu.ifpr.entidades.Proposicao</class>
+			<class>br.edu.ifpr.entidades.TipoProposicao</class>
+		<class>br.edu.ifpr.entidades.Partido</class>
 		<class>br.edu.ifpr.entidades.Cliente</class>
 		<class>br.edu.ifpr.entidades.Conta</class>
 		<class>br.edu.ifpr.entidades.Operacao</class>
 		<class>br.edu.ifpr.entidades.Pessoa</class>
-		<class>br.edu.ifpr.entidades.Usuario</class>
 		<class>br.edu.ifpr.entidades.Gerente</class>
 		<class>br.edu.ifpr.entidades.Privilegio</class>
 		<properties>

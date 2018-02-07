@@ -9,13 +9,13 @@ import javax.persistence.*;
 public class Gerente extends Pessoa implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@OneToOne
-	private Usuario usuario;
+	private Autor usuario;
 	
-	public Usuario getUsuario() {
+	public Autor getUsuario() {
 		return this.usuario;
 	}
 
-	public void setUsuario(Usuario usuario) {
+	public void setUsuario(Autor usuario) {
 		this.usuario = usuario;
 	}
    

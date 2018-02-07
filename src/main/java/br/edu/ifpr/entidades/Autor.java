@@ -1,35 +1,35 @@
 package br.edu.ifpr.entidades;
 
 import java.io.Serializable;
-import java.lang.Integer;
 import javax.persistence.*;
 
-import src.entidade.String;
-
-/**
- * Entity implementation class for Entity: Usuario
- *
- */
 @Entity
-
-public class Usuario implements Serializable {
+public class Autor implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
-	@Column(nullable=false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idAutor;
+	@Column(nullable = false)
 	private String nome;
-	@Column(nullable=false)
+	@Column(nullable = false)
 	private String senha;
-	@Column(nullable=false, columnDefinition= "BOOLEAN DEFAULT TRUE")
+	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT TRUE")
 	private Boolean status = true;
-	@Column(length=11)
-    private String cpf;
-    private String telefone;
-    @Column(nullable=false)
-    private String email;   
-    private String perfil;
-	 
+	@Column(length = 11)
+	private String cpf;
+	private String telefone;
+	@Column(nullable = false)
+	private String email;
+	private String perfil;
+
+	@ManyToOne
+	@JoinColumn(name = "idPartido")
+	private Partido partido;
+
+	@ManyToOne
+	@JoinColumn(name = "idProposicao")
+	private Proposicao proposicao;
+
 	public String getCpf() {
 		return cpf;
 	}
@@ -62,12 +62,12 @@ public class Usuario implements Serializable {
 		this.perfil = perfil;
 	}
 
-	public Integer getId() {
-		return this.id;
+	public Long getIdAutor() {
+		return idAutor;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdAutor(Long idAutor) {
+		this.idAutor = idAutor;
 	}
 
 	public String getNome() {
@@ -93,7 +93,21 @@ public class Usuario implements Serializable {
 	public void setStatus(Boolean status) {
 		this.status = status;
 	}
-	
-	
-   
+
+	public Partido getPartido() {
+		return partido;
+	}
+
+	public void setPartido(Partido partido) {
+		this.partido = partido;
+	}
+
+	public Proposicao getProposicao() {
+		return proposicao;
+	}
+
+	public void setProposicao(Proposicao proposicao) {
+		this.proposicao = proposicao;
+	}
+
 }

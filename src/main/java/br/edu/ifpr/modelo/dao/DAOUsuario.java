@@ -1,7 +1,7 @@
 package br.edu.ifpr.modelo.dao;
 
-import br.edu.ifpr.entidades.Usuario;
+import br.edu.ifpr.entidades.Autor;
 
-public interface DAOUsuario extends DAOGenerico<Usuario>{
+public interface DAOUsuario extends DAOGenerico<Autor>{
 
 }

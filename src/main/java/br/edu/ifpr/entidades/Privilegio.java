@@ -21,7 +21,7 @@ public class Privilegio implements Serializable {
 	private String nome;
 	@ManyToMany
 	@JoinTable(name="PERMISSAO")
-	private List<Usuario> usuario;
+	private List<Autor> usuario;
 	
 	
 	
@@ -37,10 +37,10 @@ public class Privilegio implements Serializable {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public List<Usuario> getUsuario() {
+	public List<Autor> getUsuario() {
 		return usuario;
 	}
-	public void setUsuario(List<Usuario> usuario) {
+	public void setUsuario(List<Autor> usuario) {
 		this.usuario = usuario;
 	}
 
