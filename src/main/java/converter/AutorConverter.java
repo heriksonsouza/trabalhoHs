@@ -21,9 +21,9 @@ public class AutorConverter implements Converter {
     public String getAsString(FacesContext facesContext, UIComponent uiComponent, Object value) {
         if (value instanceof Autor) {
             Autor entity= (Autor) value;
-            if (entity != null && entity instanceof Autor && entity.getId() != null) {
-                uiComponent.getAttributes().put( entity.getId().toString(), entity);
-                return entity.getId().toString();
+            if (entity != null && entity instanceof Autor && entity.getIdAutor() != null) {
+                uiComponent.getAttributes().put( entity.getIdAutor() .toString(), entity);
+                return entity.getIdAutor() .toString();
             }
         }
         return "";
