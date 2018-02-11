@@ -7,6 +7,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+
 import br.gov.pr.legislativo.entidades.Autor;
 import br.gov.pr.legislativo.modelo.servico.ServicoAutor;
 

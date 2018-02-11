@@ -5,6 +5,7 @@ import javax.persistence.*;
 
 @Entity
 public class Autor implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,7 +16,7 @@ public class Autor implements Serializable {
 	private String senha;
 	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT TRUE")
 	private Boolean status = true;
-	@Column(length = 11)
+	@Column(nullable = false, columnDefinition = "CHAR(14)", unique = true)
 	private String cpf;
 	private String telefone;
 	@Column(nullable = false)

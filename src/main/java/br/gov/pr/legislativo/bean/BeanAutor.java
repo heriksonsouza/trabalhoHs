@@ -26,7 +26,7 @@ public class BeanAutor implements Serializable{
 		this.autor = autor;
 	}
 
-	public String savlar(){
+	public String salvar(){
 		servico.salvar(autor);
 		return "index";
 
