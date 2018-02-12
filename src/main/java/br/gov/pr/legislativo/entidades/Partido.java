@@ -14,14 +14,14 @@ public class Partido implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idPartido")
-	private Long idPartido;
+	private Integer idPartido;
 	@Column(nullable = false)
 	private String siglaPartido;
-	private String nomePartido;
-	public Long getIdPartido() {
+	private String nome;
+	public Integer getIdPartido() {
 		return idPartido;
 	}
-	public void setIdPartido(Long idPartido) {
+	public void setIdPartido(Integer idPartido) {
 		this.idPartido = idPartido;
 	}
 	public String getSiglaPartido() {
@@ -30,11 +30,11 @@ public class Partido implements Serializable {
 	public void setSiglaPartido(String siglaPartido) {
 		this.siglaPartido = siglaPartido;
 	}
-	public String getNomePartido() {
-		return nomePartido;
+	public String getNome() {
+		return nome;
 	}
-	public void setNomePartido(String nomePartido) {
-		this.nomePartido = nomePartido;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	

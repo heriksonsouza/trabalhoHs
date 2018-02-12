@@ -23,7 +23,7 @@ http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 			-->
 			<jdbc-user-service data-source-ref="dataSource" 
 				users-by-username-query="SELECT NOME AS USERNAME, SENHA AS PASSWORD, STATUS AS ENABLE FROM USUARIO WHERE NOME=?"
-				authorities-by-username-query="SELECT U.NOME AS USERNAME, PRI.NOME AS AUTHORITY FROM USUARIO U, PRIVILEGIO PRI, PERMISSAO PER WHERE U.ID = PER.USUARIO_ID AND PRI.ID = PER.PRIVILEGIO_ID AND U.NOME=?"
+				authorities-by-username-query="SELECT A.NOME AS USERNAME, PRI.NOME AS AUTHORITY FROM USUARIO A, PRIVILEGIO PRI, PERMISSAO PER WHERE A.ID = PER.USUARIO_ID AND PRI.ID = PER.PRIVILEGIO_ID AND A.NOME=?"
 			 />
 		</authentication-provider>
 	</authentication-manager>
