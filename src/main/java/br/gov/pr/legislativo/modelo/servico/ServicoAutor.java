@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
-
 import br.gov.pr.legislativo.entidades.Autor;
 import br.gov.pr.legislativo.modelo.dao.DAOAutor;
 import br.gov.pr.legislativo.modelo.dao.hibernate.Transacao;

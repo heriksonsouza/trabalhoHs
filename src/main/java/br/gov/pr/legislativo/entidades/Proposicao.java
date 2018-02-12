@@ -17,7 +17,7 @@ public class Proposicao implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idProposicao;
+	private Integer idProposicao;
 	@Column(nullable = false)
 	private Integer numeroProposicao;
 	private Integer numeroProjeto;
@@ -35,11 +35,11 @@ public class Proposicao implements Serializable {
 	@JoinColumn(name = "idAutor")
 	private Autor autor;
 
-	public Long getIdProposicao() {
+	public Integer getIdProposicao() {
 		return idProposicao;
 	}
 
-	public void setIdProposicao(Long idProposicao) {
+	public void setIdProposicao(Integer idProposicao) {
 		this.idProposicao = idProposicao;
 	}
 
@@ -98,7 +98,5 @@ public class Proposicao implements Serializable {
 	public void setNumeroProjeto(Integer numeroProjeto) {
 		this.numeroProjeto = numeroProjeto;
 	}
-	
-	
 
 }
