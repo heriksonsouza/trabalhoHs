@@ -10,16 +10,25 @@
 	<ui:composition template="templatePrincipal.xhtml">
 		<ui:define name="conteudo">
 			<h:form id="form">
-				<p:dataTable id="tabela" value="#{beanConta.lista}" var="conta">
+				<p:dataTable id="tabela" value="#{beanListProposicao.lista}" var="proposicao">
 					<f:facet name="header">Lista de Contas</f:facet>
 					<p:column headerText="ID">
-				#{conta.id}
+				#{proposicao.idProposicao}
 			</p:column>
-					<p:column headerText="NOME">
-				#{conta.cliente.nome}
+					<p:column headerText="AUTOR">
+				#{proposicao.autor.nome}
 			</p:column>
-					<p:column headerText="SALDO">
-				#{conta.saldo}
+					<p:column headerText="NÚMERO">
+				#{proposicao.numeroProposicao}
+			</p:column>
+			<p:column headerText="TIPO">
+				#{proposicao.tipoProposicao}
+			</p:column>
+			<p:column headerText="SÚMULA">
+				#{proposicao.resumo}
+			</p:column>
+			<p:column headerText="ANO">
+				#{proposicao.ano}
 			</p:column>
 				</p:dataTable>
 			</h:form>

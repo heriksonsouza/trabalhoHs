@@ -12,11 +12,11 @@ import br.gov.pr.legislativo.modelo.servico.ServicoAutor;
 
 @Named
 @RequestScoped
-// @ViewScoped
 public class BeanListAutor implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Autor autor = new Autor();
+	
 	@Inject
 	private ServicoAutor servico;
 	private List<Autor> lista;
