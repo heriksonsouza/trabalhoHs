@@ -17,12 +17,19 @@
 					<h:message id="teste"  ></h:message>
 					<h:panelGrid columns="2">
 						<p:outputLabel value="Nome:" for="nome" />
-						<p:inputText id="nome" value="#{beanCliente.cliente.nome}" />
+						<p:inputText id="nome" value="#{beanAutor.autor.nome}" />
+						
+						<p:outputLabel value="Partido: " for="partido" />
+						<p:inputMask id="telefone" value="#{beanAutor.autor.partido.siglaPartido}" />
 						
 						<p:outputLabel value="Cpf: " for="cpf" />
-						<p:inputMask id="cpf" value="#{beanCliente.cliente.cpf}" mask="999.999.999-99" />
-					</h:panelGrid>
-					<p:commandButton action="#{beanCliente.savlar()}" value="salvar" icon="ui-icon-check" />
+						<p:inputMask id="cpf" value="#{beanAutor.autor.cpf}" mask="999.999.999-99" />
+						
+						<p:outputLabel value="Telefone: " for="telefone" />
+						<p:inputMask id="telefone" value="#{beanAutor.autor.telefone}" />
+						
+										</h:panelGrid>
+					<p:commandButton action="#{beanAutor.salvar()}" value="salvar" icon="ui-icon-check" />
 				</h:form>
 			</p:panel>
 
