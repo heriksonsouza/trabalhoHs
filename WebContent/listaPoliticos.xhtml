@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<ui:composition template="templatePrincipal.xhtml">
+		<ui:define name="conteudo">
+
+			<h:form id="form">
+				<p:dataTable id="tabela" value="#{beanListAutor.lista}" var="autor">
+					<f:facet name="header">Lista de Contas</f:facet>
+					<p:column headerText="ID">
+				#{autor.idAutor}
+			</p:column>
+					<p:column headerText="NOME">
+				#{autor.nome}
+			</p:column>
+					<p:column headerText="PARTIDO">
+				#{autor.partido.siglaPartido}
+			</p:column>
+					<p:column headerText="EMAIL">
+				#{autor.email}
+			</p:column>
+					<p:column headerText="TELEFONE">
+				#{autor.telefone}
+			</p:column>
+				</p:dataTable>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>

@@ -10,7 +10,7 @@
 <h:body>
 	<div id="pagina">
 		<header style="height: 200px;"> <h:graphicImage
-			value="resources/img/paranavai-vertical.png"
+			value="resources/img/cantoe.jpg"
 			style="width:100% important!;margin-left:auto;" /> </header>
 		<p:separator />
 		<h:form>
@@ -21,19 +21,13 @@
 					<p:submenu label="Cadastro" icon="ui-icon-document">
 						<p:menuitem value="Partido Político" url="#" />
 						<p:menuitem value="Autor" url="autor.xhtml" />
-						<p:menuitem value="Tipo de proposição" url="#" />
-						<p:menuitem value="Proposição" url="#" />
+						<p:menuitem value="Tipo de proposição" url="tipoProposicao.xhtml" />
+						<p:menuitem value="Proposição" url="listaProposicoes.xhtml" />
 					</p:submenu>
 					<p:submenu label="Consulta" icon="ui-icon-document">
-						<p:menuitem value="Proposições"	url="administrador/listaCliente.xhtml" />
-						<p:menuitem value="Vereadores" url="#" />
+						<p:menuitem value="Proposições" url="listaProposicoes.xhtml" />
+						<p:menuitem value="Vereadores" url="listaPoliticos.xhtml" />
 					</p:submenu>
-					<!-- 					<p:submenu label="Movimento" icon="ui-icon-document"> -->
-					<!-- 						<p:menuitem value="Transferência" url="cliente" /> -->
-					<!-- 						<p:menuitem value="Depósito" url="#" /> -->
-					<!-- 						<p:menuitem value="Retirada" url="#" /> -->
-					<!-- 					</p:submenu> -->
-
 				</p:menubar>
 			</h:form>
 		</h:form>

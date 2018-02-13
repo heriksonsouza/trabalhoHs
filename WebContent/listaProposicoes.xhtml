@@ -9,8 +9,43 @@
 <body>
 	<ui:composition template="templatePrincipal.xhtml">
 		<ui:define name="conteudo">
+
+			<p:panel header="Cadastro de Proposições">
+				<h:form id="form">
+					<h:message id="proposicao"></h:message>
+					<h:panelGrid columns="2">
+
+						<p:outputLabel value="Número:" for="numero" />
+						<p:inputText id="numero"
+							value="#{beanProposicao.proposicao.numeroProposicao}" />
+
+						<p:outputLabel value="Número do Projeto:" for="numeroprojeto" />
+						<p:inputText id="numeroprojeto"
+							value="#{beanProposicao.proposicao.numeroProjeto}" />
+
+						<p:outputLabel value="Ano:" for="ano" />
+						<p:inputText id="ano" value="#{beanProposicao.proposicao.ano}" />
+
+						<p:outputLabel value="Tipo de matéria:" for="tipoProposicao" />
+						<p:inputText id="tipoProposicao"
+							value="#{beanProposicao.proposicao.tipoProposicao}" />
+
+						<p:outputLabel value="Autor:" for="autor" />
+						<p:inputText id="autor" value="#{beanProposicao.proposicao.autor}" />
+
+						<p:outputLabel value="Súmula:" for="resumo" />
+						<p:inputText id="resumo" value="#{beanProposicao.proposicao.resumo}" />
+
+					</h:panelGrid>
+					<p:commandButton action="#{beanProposicao.salvar()}" value="salvar"
+						icon="ui-icon-check" />
+				</h:form>
+			</p:panel>
+
+
 			<h:form id="form">
-				<p:dataTable id="tabela" value="#{beanListProposicao.lista}" var="proposicao">
+				<p:dataTable id="tabela" value="#{beanListProposicao.lista}"
+					var="proposicao">
 					<f:facet name="header">Lista de Contas</f:facet>
 					<p:column headerText="ID">
 				#{proposicao.idProposicao}
@@ -21,13 +56,13 @@
 					<p:column headerText="NÚMERO">
 				#{proposicao.numeroProposicao}
 			</p:column>
-			<p:column headerText="TIPO">
+					<p:column headerText="TIPO">
 				#{proposicao.tipoProposicao}
 			</p:column>
-			<p:column headerText="SÚMULA">
+					<p:column headerText="SÚMULA">
 				#{proposicao.resumo}
 			</p:column>
-			<p:column headerText="ANO">
+					<p:column headerText="ANO">
 				#{proposicao.ano}
 			</p:column>
 				</p:dataTable>
